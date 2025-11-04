@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Loja IPHONESEGURO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+@media (max-width: 768px) {
+ 
+
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .product-info p {
+      font-size: 1em;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .price {
+      font-size: 1.3em;
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+footer {
+      background: linear-gradient(to right, #000000, #1c1c1c);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+      font-size: 1em;
+    }
+    .logotipo
+    {
+      max-width: 150px;
+      height: auto;
+    }
+
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.redonda {
+  width: 100px;       /* tamanho da foto */
+  height: 100px;      /* altura igual à largura */
+  border-radius: 50%; /* deixa a foto redonda */
+  object-fit: cover;  /* ajusta a imagem dentro do espaço */
+}
+.produtos{
+  display: block;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background-color: #c8af07;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 15px;
+
+}
+
+.produtos:hover {
+  display: block;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background-color: #000000;
+  color: #dfc30c;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  border: 5px solid #dfc30c;
+  border-radius: 15px;
+
+}
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+
+    .carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.botao-produto-grande {
+  background-color: #dfc30c;
+  color: #000;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.botao-produto-grande:hover {
+  background-color: #c4a90a;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .botao-produto {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .btn, .botao-produto-grande {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .btn, .botao-produto-grande {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+
+
+.menu-toggle {
+  font-size: 2em;
+  color: #dfc30c;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: none;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li a {
+  color: #dfc30c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-list li a:hover {
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .menu-list.show {
+    display: flex;
+  }
+
+  .menu-list li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu-list li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+.navbar-header {
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+ 
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.logotipo {
+  max-width: 120px;
+  height: auto;
+}
+
+.loja-nome {
+  color: #dfc30c;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.navbar-menu a {
+  color: #dfc30c;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: background-color 0.3s;
+    font-size: 0.95em;
+}
+
+.navbar-menu a:hover {
+  background-color: #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+  </style>
+</head>
+<body>
+
+<header class="navbar-header">
+  <div class="navbar-container">
+    <a href="index.html" class="logo-area">
+      <img src="logo.png" alt="Logo Loja iPhones" class="logotipo">
+      <span class="loja-nome"> Iphone Seguro</span>
+    </a>
+    <nav class="navbar-menu">
+      <a href="./termos-de-uso.html">Termo de Uso</a>
+      <a href="./trocas-e-devolucoes.html">Trocas e Devoluções</a>
+      <a href="./contato.html">Quem somos</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="col-md-8">
+				<p style="text-align:center;">&nbsp;</p>
+<h2 style="text-align:center;">Política de Devolução – iPhone Parcelado</h2>
+<p >Na <strong>iPhone Parcelado</strong>, nosso compromisso é oferecer uma experiência de compra segura, justa e transparente. Sabemos que imprevistos podem acontecer e, por isso, estabelecemos uma política de devolução com regras claras, respeitando o Código de Defesa do Consumidor, mas também protegendo a integridade dos nossos produtos.</p>
+<h3 style="text-align:center;">🗓️ Prazo Legal de Devolução</h3>
+<p style="text-align:center;">Para compras realizadas online, o cliente tem direito ao <strong>arrependimento dentro de 7 dias corridos</strong> a partir da data de recebimento do pedido. Esse é um direito garantido pelo artigo 49 do Código de Defesa do Consumidor.</p>
+<p style="text-align:center;">No entanto, para que a devolução seja aceita, é essencial que o produto <strong>não tenha sido ativado</strong> e esteja em condições perfeitas de revenda.</p>
+<hr>
+<h3 style="text-align:center;">✔️ Requisitos Obrigatórios para Aceitação da Devolução</h3>
+<p style="text-align:center;">Para garantir a aceitação da devolução, o produto precisa obrigatoriamente atender a <strong>TODAS</strong> as condições abaixo:</p>
+<ul style="text-align:center;">
+<li>
+<p><strong>Não pode ter sido ativado</strong>: O aparelho deve estar com o status de ativação original de fábrica, sem qualquer configuração inicial realizada.</p>
+</li>
+<li>
+<p><strong>Sem marcas de uso</strong>: O celular deve estar em perfeito estado, sem arranhões, amassados, manchas ou sinais de uso.</p>
+</li>
+<li>
+<p><strong>Embalagem original intacta</strong>: A caixa do produto precisa estar em bom estado, sem rasgos, riscos ou danos.</p>
+</li>
+<li>
+<p><strong>Todos os acessórios originais devem estar presentes</strong>, incluindo carregador, cabo, fones (se houver), manuais e adesivos – tudo <strong>sem uso e em perfeitas condições</strong>.</p>
+</li>
+<li>
+<p><strong>Produto bem embalado</strong> para o envio de retorno, evitando qualquer tipo de dano no transporte.</p>
+</li>
+</ul>
+<hr>
+<h3 style="text-align:center;">❌ Casos em que a Devolução Será Recusada</h3>
+<p style="text-align:center;">Infelizmente, a devolução <strong>não será aceita</strong> nos seguintes casos:</p>
+<ul style="text-align:center;">
+<li>
+<p>O aparelho foi <strong>ativado</strong>, mesmo que dentro do prazo legal de 7 dias;</p>
+</li>
+<li>
+<p>Qualquer <strong>indício de uso</strong>, incluindo riscos, digitais na tela, marcas no corpo do aparelho ou acessórios usados;</p>
+</li>
+<li>
+<p>Ausência de itens originais ou acessórios danificados;</p>
+</li>
+<li>
+<p>Embalagem avariada ou descaracterizada;</p>
+</li>
+<li>
+<p>O produto foi enviado fora do prazo permitido para devolução.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Atenção:</strong> Todos os produtos devolvidos passam por uma análise técnica no recebimento. Caso a análise identifique qualquer inconformidade com os critérios acima, a devolução será recusada.</p>
+</blockquote>
+<p style="text-align:center;">Nesses casos, o produto será reenviado ao cliente, e <strong>o custo do frete de reenvio ficará por conta do comprador</strong>.</p>
+<hr>
+<h3 style="text-align:center;">📬 Como Solicitar a Devolução</h3>
+<p style="text-align:center;">Se você estiver dentro do prazo e todas as condições forem atendidas, basta seguir os passos abaixo:</p>
+<ol style="text-align:center;">
+<li>
+<p><strong>Entre em contato com nossa equipe de atendimento</strong> através do e-mail ou WhatsApp informando:</p>
+<ul>
+<li>
+<p>Nome completo</p>
+</li>
+<li>
+<p>Número do pedido</p>
+</li>
+<li>
+<p>Motivo da devolução</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Após a solicitação, enviaremos as <strong>instruções completas para o envio do produto</strong>.</p>
+</li>
+<li>
+<p>Assim que o produto for recebido e analisado, realizaremos o <strong>estorno do valor pago</strong> ou a <strong>troca</strong>, conforme sua preferência e de acordo com as condições acordadas.</p>
+</li>
+</ol>
+<hr>
+<h3 style="text-align:center;">🤝 Nosso Compromisso</h3>
+<p style="text-align:center;">Na iPhone Parcelado, buscamos sempre a sua satisfação. Nossa política foi criada para proteger você, consumidor, e também garantir que os produtos que retornam à nossa loja estejam em perfeitas condições para futuros clientes. Se tiver qualquer dúvida, nossa equipe estará sempre pronta para ajudar.</p>
+			</div>
+
+
+
+    <!-- Adicione mais produtos abaixo seguindo o mesmo padrão -->
+  </section>
+
+<footer>
+    <h3 style="margin-bottom: 15px; font-size: 1.6em; color: #dfc30c; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+      LOJA IPHONE SEGURO
+    </h3>
+    <p style="margin: 5px 0; font-weight: bold;">CNPJ: 57.443.683/0001-79</p>
+    <p style="margin: 5px 0;">Avenida Salgado Filho, 2120, Centro, Guarulhos-SP CEP:07115-000</p>
+    <p style="margin: 5px 0;">Produto original com nota fiscal e garantia de até 90 meses.</p>
+    <p style="margin-top: 15px; font-size: 0.9em;">&copy; 2025 LOJA IPHONE SEGURO. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

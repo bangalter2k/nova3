@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Finalizar Compra - iPhone 15 PRO MAX</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    .mensagem-segura {
+      text-align: center;
+      font-size: 1.4em;
+      color: #333;
+      margin-top: 60px;
+      animation: fade 1s ease-in-out;
+    }
+
+    .loader {
+      margin: 30px auto;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #28a745;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .iframe-container {
+      display: none;
+      margin-top: 40px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 1450px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar-header">
+  <div class="navbar-container">
+    <a href="index.html"><img src="logo.png" alt="Logo Loja iPhones" class="logotipo"></a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+        <h1 style="text-align: center;">Carrinho - iPhone 15 PRO MAX</h1>
+    <p style="text-align: center;" id="corSelecionada"></p>
+
+    <div id="mensagem" class="mensagem-segura">
+      ✅ Entrando em um ambiente seguro...<br>
+      🔒 Carregando informações de pagamento...
+      <div class="loader"></div>
+    </div>
+
+    <div id="pagamento" class="iframe-container">
+      <iframe src="https://app.streetpay.com.br/payment/checkout/6b737255-a299-431a-bd07-f2d83fcf46aa"></iframe>
+    </div>
+  </div>
+</main>
+
+<footer id="contato">
+  <h3 style="color: #dfc30c;">LOJA IPHONE SEGURO</h3>
+  <p><strong>CNPJ:</strong> 57.443.683/0001-79</p>
+  <p>Avenida Salgado Filho, 2120, Centro, Guarulhos-SP CEP:07115-000</p>
+  <p>&copy; 2025 LOJA IPHONE SEGURO. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const cor = params.get("cor");
+  if (cor) {
+    document.getElementById("corSelecionada").textContent = `Cor selecionada: ${cor}`;
+  }
+
+  setTimeout(() => {
+    document.getElementById("mensagem").style.display = "none";
+    document.getElementById("pagamento").style.display = "block";
+    window.scrollTo({
+      top: document.getElementById("pagamento").offsetTop,
+      behavior: "smooth"
+    });
+  }, 7000);
+</script>
+
+</body>
+</html>
